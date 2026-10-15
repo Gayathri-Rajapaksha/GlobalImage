@@ -1,0 +1,45 @@
+# ==========================================
+# GlobalImage Application .gitignore
+# ==========================================
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+!.env.example
+!server/.env.example
+
+# Build Outputs
+build/
+client/build/
+**/build/
+dist/
+**/dist/
+
+# Operating System Junk
+.DS_Store
+.DS_Store?
+._*
+__MACOSX/
+**/__MACOSX/
+Thumbs.db
+ehthumbs.db
+
+# Customer Uploads, Payment Slips & Private Assets
+server/uploads/*
+!server/uploads/.gitkeep
+**/uploads/*
+!**/uploads/.gitkeep
+
+# Logs & Debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Test Coverage
+coverage/
+.nyc_output/

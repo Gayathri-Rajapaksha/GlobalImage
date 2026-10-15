@@ -1,0 +1,350 @@
+.about-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #e3f0ff 0%, #f8fafc 100%), url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20" cy="20" r="1.5" fill="%234fc3f7" fill-opacity="0.08"/></svg>');
+  background-blend-mode: lighten;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.about-bg::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 80% 10%, #4fc3f7 0%, transparent 60%),
+              radial-gradient(circle at 10% 90%, #1976d2 0%, transparent 70%);
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-container {
+  background: rgba(255,255,255,0.92);
+  border-radius: 28px;
+  box-shadow: 0 12px 48px rgba(9,27,52,0.13), 0 2px 12px rgba(79,195,247,0.10);
+  padding: 3.5rem 3.2rem 3rem 3.2rem;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+  backdrop-filter: blur(12px) saturate(140%);
+  border: 2px solid rgba(79,195,247,0.13);
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.22s, background 0.22s;
+}
+
+.about-title {
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: #091B34;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2.5px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(79,195,247,0.08);
+}
+
+.about-divider {
+  width: 90px;
+  height: 6px;
+  background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
+  border-radius: 3px;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 2px 12px rgba(79,195,247,0.13);
+}
+
+.about-subtitle {
+  color: #1976d2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+.about-text {
+  color: #222b45;
+  font-size: 1.18rem;
+  font-weight: 500;
+  line-height: 1.85;
+  letter-spacing: 0.13px;
+  text-align: center;
+  margin-bottom: 0;
+  text-shadow: 0 1px 4px rgba(79,195,247,0.04);
+}
+
+.about-text strong {
+  color: #1976d2;
+  font-weight: 700;
+}
+
+.about-section {
+  margin-top: 4rem;
+  margin-bottom: 3.5rem;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.about-section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #1976d2;
+  margin-bottom: 2rem;
+  letter-spacing: 1.2px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(79,195,247,0.08);
+}
+
+/* Purpose */
+.about-purpose-grid {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.about-purpose-block {
+  background: rgba(255,255,255,0.97);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(79,195,247,0.10);
+  padding: 2.2rem 1.7rem;
+  min-width: 240px;
+  max-width: 340px;
+  text-align: center;
+  margin-bottom: 1.7rem;
+  transition: box-shadow 0.22s, transform 0.22s, background 0.22s;
+  border: 1.5px solid #e3f0ff;
+}
+.about-purpose-block:hover {
+  box-shadow: 0 12px 48px rgba(9,27,52,0.13);
+  background: #f8fafc;
+  transform: translateY(-4px) scale(1.03);
+}
+.about-purpose-block h3 {
+  color: #1976d2;
+  margin-bottom: 0.7rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+.about-purpose-block p {
+  color: #222b45;
+  font-size: 1.08rem;
+  font-weight: 500;
+}
+
+/* Team */
+.about-team-grid {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.about-team-card {
+  background: rgba(255,255,255,0.98);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(79,195,247,0.10);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.22s, transform 0.22s, background 0.22s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #e3f0ff;
+}
+.about-team-card:hover {
+  box-shadow: 0 12px 48px rgba(9,27,52,0.13);
+  background: #f8fafc;
+  transform: translateY(-4px) scale(1.03);
+}
+.about-team-photo {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(79,195,247,0.13);
+  border: 3px solid #e3f0ff;
+  background: #fff;
+  display: block;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.about-team-card:hover .about-team-photo {
+  box-shadow: 0 6px 24px rgba(25,118,210,0.13);
+  transform: scale(1.06);
+}
+.about-team-name {
+  color: #1976d2;
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.2px;
+}
+.about-team-title {
+  color: #091B34;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.about-team-desc {
+  color: #5a6a85;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+
+.about-team-viewall-btn {
+  margin-top: 2rem;
+  background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.13rem;
+  padding: 0.7rem 2.5rem;
+  border: none;
+  border-radius: 1.7rem;
+  box-shadow: 0 2px 8px rgba(79,195,247,0.13);
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  letter-spacing: 0.6px;
+  outline: none;
+  display: block;
+}
+.about-team-viewall-btn:hover {
+  background: linear-gradient(90deg, #1976d2 0%, #4fc3f7 100%);
+  box-shadow: 0 4px 16px rgba(25,118,210,0.13);
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Tools */
+.about-tools-grid {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.about-tool-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(79,195,247,0.10);
+  padding: 2rem 1.5rem;
+  min-width: 220px;
+  max-width: 260px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.22s, transform 0.22s, background 0.22s;
+  border: 1.5px solid #e3f0ff;
+}
+.about-tool-card:hover {
+  box-shadow: 0 12px 48px rgba(9,27,52,0.13);
+  background: #f8fafc;
+  transform: translateY(-4px) scale(1.03);
+}
+.about-tool-title {
+  color: #1976d2;
+  font-size: 1.13rem;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.2px;
+}
+.about-tool-desc {
+  color: #5a6a85;
+  font-size: 1.01rem;
+  font-weight: 500;
+}
+
+/* Impact */
+.about-impact-grid {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.about-impact-card {
+  background: linear-gradient(90deg, #4fc3f7 0%, #1976d2 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(79,195,247,0.10);
+  padding: 2.2rem 1.5rem;
+  min-width: 170px;
+  max-width: 220px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.about-impact-card:hover {
+  box-shadow: 0 12px 48px rgba(9,27,52,0.13);
+  transform: translateY(-4px) scale(1.03);
+}
+.about-impact-value {
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 0.3rem;
+  letter-spacing: 1.3px;
+  text-shadow: 0 2px 8px rgba(25,118,210,0.10);
+}
+.about-impact-label {
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.13px;
+}
+
+@media (max-width: 1000px) {
+  .about-container, .about-section {
+    max-width: 98vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .about-purpose-grid, .about-team-grid, .about-tools-grid, .about-impact-grid {
+    gap: 1.2rem;
+  }
+  .about-section {
+    margin-top: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-purpose-block, .about-team-card, .about-tool-card, .about-impact-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    padding: 1rem 0.5rem;
+  }
+  .about-section-title {
+    font-size: 1.2rem;
+  }
+  .about-title {
+    font-size: 1.3rem;
+  }
+  .about-subtitle {
+    font-size: 1.01rem;
+  }
+  .about-divider {
+    width: 40px;
+    height: 3px;
+    margin: 0.7rem 0 1.1rem 0;
+  }
+  .about-text {
+    font-size: 0.98rem;
+  }
+} 
